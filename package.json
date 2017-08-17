@@ -1,0 +1,35 @@
+{
+  "name": "micro-like-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "ioredis": "^3.1.4",
+    "micro": "^8.0.3"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "codeclimate-test-reporter": "^0.4.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-unicorn": "^2.1.1",
+    "eslint-plugin-xo": "^1.0.0",
+    "micro-dev": "1.2.1",
+    "nyc": "^10.3.2",
+    "request-promise": "^4.2.1",
+    "request-promise-core": "^1.1.1",
+    "test-listen": "^1.0.2"
+  },
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev",
+    "lint": "eslint .",
+    "test": "nyc ava --verbose",
+    "coverage": "nyc report --reporter=lcov && codeclimate-test-reporter < coverage/lcov.info"
+  }
+}
