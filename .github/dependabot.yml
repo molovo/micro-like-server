@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: ioredis
+    versions:
+    - 4.19.4
+    - 4.22.0
+    - 4.23.0
+    - 4.24.2
+    - 4.24.3
+    - 4.24.4
+    - 4.24.5
+    - 4.24.6
+    - 4.25.0
+    - 4.26.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
